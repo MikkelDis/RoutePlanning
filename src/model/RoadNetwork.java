@@ -19,6 +19,13 @@ public class RoadNetwork {
         if(!this.network.containsKey(newRoad.getDeparture())) {
             addLocation(newRoad.getDeparture());
         }
+        if(!this.network.containsKey(newRoad.getDestination())) {
+            addLocation(newRoad.getDestination());
+        }
         this.network.get(newRoad.getDeparture()).add(newRoad);
+    }
+
+    public Map<String, List<Road>> getNetwork(){
+        return network;
     }
 }
