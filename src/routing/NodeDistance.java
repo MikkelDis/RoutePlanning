@@ -1,15 +1,15 @@
 package routing;
 
 class NodeDistance {
-    private int distance;
+    private double distance;
     private String location;
 
-    public NodeDistance(int distance, String location){
+    public NodeDistance(double distance, String location){
         this.distance = distance;
         this.location = location;
     }
 
-    public int getDistance(){
+    public double getDistance(){
         return this.distance;
     }
     public String getLocation(){

@@ -11,7 +11,7 @@ public class Main {
 
         DijkstraStrategy dijkstraAlgo = new DijkstraStrategy();
 
-        Map<String, Integer> shortespaths = dijkstraAlgo.calculateShortestPath("Aalborg", "", network);
+        Map<String, Double> shortespaths = dijkstraAlgo.calculateShortestPath("Aalborg", "Asaa", network);
         System.out.println(shortespaths);
 
     }

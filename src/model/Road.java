@@ -23,4 +23,8 @@ public class Road {
     public String getDestination(){
         return this.destination;
     }
+
+    public double getDistance(){
+        return this.distance;
+    }
 }
