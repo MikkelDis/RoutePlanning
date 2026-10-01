@@ -14,7 +14,7 @@ public class DijkstraStrategy {
         PriorityQueue<NodeDistance> minQueue = new PriorityQueue<>((a, b) -> Double.compare(a.getDistance(), b.getDistance()));
         Map<String, Double> dist = new HashMap();
         Map<String, String> previous = new HashMap<>();
-        for (String location : network.getNetwork().keySet()){
+        for (String location : network.getNetwork().keySet()) {
             dist.put(location, Double.MAX_VALUE);
             previous.put(location, "");
         }

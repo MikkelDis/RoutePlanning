@@ -1,0 +1,8 @@
+/home/mikkel/Java/RoutePlanning/src/main/java/model/Warehouse.java
+/home/mikkel/Java/RoutePlanning/src/main/java/model/Item.java
+/home/mikkel/Java/RoutePlanning/src/main/java/model/Road.java
+/home/mikkel/Java/RoutePlanning/src/main/java/routing/DijkstraStrategy.java
+/home/mikkel/Java/RoutePlanning/src/main/java/routing/NodeDistance.java
+/home/mikkel/Java/RoutePlanning/src/main/java/data/NetworkLoader.java
+/home/mikkel/Java/RoutePlanning/src/main/java/model/RoadNetwork.java
+/home/mikkel/Java/RoutePlanning/src/main/java/Main.java
