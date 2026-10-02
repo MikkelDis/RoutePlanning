@@ -1,26 +1,22 @@
 package model;
 
+import de.topobyte.osm4j.core.model.iface.OsmNode;
+
 public class Road {
 
-    private String departureLocation;
-    private String destination;
+    private OsmNode destination;
 
     private double distance;
     private int speedLimit;
 
 
-    public Road(String departureLocation, String destination, double distance, int speedLimit){
-        this.departureLocation = departureLocation;
+    public Road(OsmNode destination, double distance, int speedLimit){
         this.destination = destination;
         this.distance = distance;
         this.speedLimit = speedLimit;
     }
 
-    public String getDeparture(){
-        return this.departureLocation;
-    }
-
-    public String getDestination(){
+    public OsmNode getDestination(){
         return this.destination;
     }
 

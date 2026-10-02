@@ -1,5 +1,6 @@
 package routing;
 
+import de.topobyte.osm4j.core.model.iface.OsmNode;
 import model.Road;
 import model.RoadNetwork;
 
@@ -10,13 +11,24 @@ import java.util.PriorityQueue;
 
 public class DijkstraStrategy {
 
-    public Map<String, Double> calculateShortestPath(final String source, final String destination, final RoadNetwork network){
+   public Map<OsmNode, Double> calculateShortestPath(final OsmNode source, final OsmNode destination, final RoadNetwork network){
+       System.out.println("Source exists: " +
+               network.getNetwork().containsKey(source));
+
+       System.out.println("Destination exists: " +
+               network.getNetwork().containsKey(destination));
+
+       System.out.println("Source outgoing roads: " +
+               network.getNetwork().get(source).size());
+
+       System.out.println("Destination outgoing roads: " +
+               network.getNetwork().get(destination).size());
         PriorityQueue<NodeDistance> minQueue = new PriorityQueue<>((a, b) -> Double.compare(a.getDistance(), b.getDistance()));
-        Map<String, Double> dist = new HashMap();
-        Map<String, String> previous = new HashMap<>();
-        for (String location : network.getNetwork().keySet()) {
+        Map<OsmNode, Double> dist = new HashMap<>();
+        Map<OsmNode, OsmNode> previous = new HashMap<>();
+        for (OsmNode location : network.getNetwork().keySet()) {
             dist.put(location, Double.MAX_VALUE);
-            previous.put(location, "");
+            previous.put(location, null);
         }
 
         //Overwrite source, makes distance to itself 0.
@@ -41,13 +53,21 @@ public class DijkstraStrategy {
             }
         }
 
-        String currentDest = destination;
-        System.out.println(currentDest);
+        OsmNode currentDest = destination;
+        System.out.println(currentDest.getId() + " AND " + currentDest.getNumberOfTags());
+       System.out.println("Distance: " + dist.get(destination));
+       System.out.println("Previous: " + previous.get(destination));
+        for(int i = 0; i < currentDest.getNumberOfTags(); i++){
+            System.out.println(currentDest.getTag(i).getKey() + " = " + currentDest.getTag(i).getValue());
+        }
+       System.out.println("---------");
         do {
             currentDest = previous.get(currentDest);
-            System.out.println(currentDest);
+            for(int i = 0; i < currentDest.getNumberOfTags(); i++){
+                System.out.println(currentDest.getTag(i).getKey() + " = " + currentDest.getTag(i).getValue());
+            }
+            System.out.println("---------");
         } while (!currentDest.equals(source));
         return dist;
     }
-
 }

@@ -9,10 +9,8 @@ public class Main {
         NetworkLoader loader = new NetworkLoader();
         RoadNetwork network = loader.loadNetwork();
 
-        DijkstraStrategy dijkstraAlgo = new DijkstraStrategy();
-
-        Map<String, Double> shortespaths = dijkstraAlgo.calculateShortestPath("Aalborg", "Asaa", network);
-        System.out.println(shortespaths);
+        DijkstraStrategy dijkstra = new DijkstraStrategy();
+        dijkstra.calculateShortestPath(network.getNodeFromId(14135030699L),  network.getNodeFromId(2300917741L), network);
 
     }
 }
