@@ -1,8 +1,10 @@
-/home/mikkel/Java/RoutePlanning/src/main/java/model/Warehouse.java
-/home/mikkel/Java/RoutePlanning/src/main/java/model/Item.java
-/home/mikkel/Java/RoutePlanning/src/main/java/model/Road.java
-/home/mikkel/Java/RoutePlanning/src/main/java/routing/DijkstraStrategy.java
-/home/mikkel/Java/RoutePlanning/src/main/java/routing/NodeDistance.java
-/home/mikkel/Java/RoutePlanning/src/main/java/data/NetworkLoader.java
-/home/mikkel/Java/RoutePlanning/src/main/java/model/RoadNetwork.java
 /home/mikkel/Java/RoutePlanning/src/main/java/Main.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/RoutePlanningApplication.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/controller/GSearchController.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/data/NetworkLoader.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/model/Item.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/model/Road.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/model/RoadNetwork.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/model/Warehouse.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/routing/DijkstraStrategy.java
+/home/mikkel/Java/RoutePlanning/src/main/java/dk/mikkel/routeplanning/routing/NodeDistance.java

@@ -1,8 +1,6 @@
-import data.NetworkLoader;
-import model.RoadNetwork;
-import routing.DijkstraStrategy;
-
-import java.util.Map;
+import dk.mikkel.routeplanning.data.NetworkLoader;
+import dk.mikkel.routeplanning.model.RoadNetwork;
+import dk.mikkel.routeplanning.routing.DijkstraStrategy;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: routeplanner-postgres
+    environment:
+      POSTGRES_DB: shop
+      POSTGRES_USER: shop
+      POSTGRES_PASSWORD_FILE: '/run/secrets/db_password'
+    ports:
+      - "5432:5432"
+    secrets:
+      - db_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+
+volumes:
+  postgres_data:
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt
