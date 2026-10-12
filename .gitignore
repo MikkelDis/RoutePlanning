@@ -3,6 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+.idea/
+*.iml
 
 ### Eclipse ###
 .apt_generated
@@ -29,5 +31,13 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-##Docker
+##Secrets
 secrets/
+.env
+.env.*
+
+# Logs
+*.log
+
+# Maven
+target/
